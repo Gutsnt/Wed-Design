@@ -51,6 +51,7 @@ a:visiter{
 }
 .content{
 		padding: 1em;
+		overflow: scroll;
 	}
 	td{
 		display: block;
