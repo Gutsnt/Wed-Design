@@ -46,7 +46,7 @@ a:visiter{
 	background-color: white;
 	border-radius: 4px;
 	position: relative;
-	overflow: scroll;
+
 	
 	
 }
@@ -55,7 +55,7 @@ a:visiter{
 		
 	}
 @media(max-width: 390px){
-	.conten{
+	.content{
 		overflow: scroll;
 	}
 }
