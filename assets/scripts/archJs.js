@@ -1,4 +1,4 @@
-class Book{
+/*class Book{
 
 	constructor(title,author,year,gender){
 		this.title = title;
@@ -35,3 +35,36 @@ class Book{
 	}
 
 	showAllBooks();
+*/
+ const days = ['Lunes','Martes','Miercoles','Jueves','Viernes']
+
+ const title = document.getElementById('title')
+ const daysList = document.getElementById('daysList')
+ const daysSelect = document.getElementById('daysSelect')
+
+ const itemList = document.createElement('LI')
+
+ itemList.textContent = 'Lunes'
+ daysList.appendChild(itemList)
+
+ title.innerHTML = '<span>Practica<span>'
+ console.log(itemList);
+
+ const fragment = document.createDocumentFragment()
+
+ /*for (const day of days){
+ 	const itemList = document.createElement('LI')
+	itemList.textContent = day
+
+	fragment.appendChild(itemList)
+ }
+*/
+ for (const day of days){
+ 	const selecItem = document.createElement('OPTION')
+ 	selecItem.setAttribute('value',day.toLowerCase())
+ 	selecItem.textContent = day
+ 	fragment.appendChild(selecItem)
+
+ }
+ daysSelect.appendChild(fragment)
+
