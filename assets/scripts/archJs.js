@@ -36,6 +36,7 @@
 
 	showAllBooks();
 */
+/*
  const days = ['Lunes','Martes','Miercoles','Jueves','Viernes']
 
  const title = document.getElementById('title')
@@ -52,13 +53,13 @@
 
  const fragment = document.createDocumentFragment()
 
- /*for (const day of days){
+ for (const day of days){
  	const itemList = document.createElement('LI')
 	itemList.textContent = day
 
 	fragment.appendChild(itemList)
  }
-*/
+
  for (const day of days){
  	const selecItem = document.createElement('OPTION')
  	selecItem.setAttribute('value',day.toLowerCase())
@@ -67,5 +68,11 @@
 
  }
  daysSelect.appendChild(fragment)
- g
+ 
+*/
 
+const parent = document.getElementById('parent')
+
+//console.log(parent.parentElement);
+console.log(parent.firstElementChild);
+console.log(parent.hasChildNodes());
