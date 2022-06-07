@@ -70,9 +70,31 @@
  daysSelect.appendChild(fragment)
  
 */
-
+/*
 const parent = document.getElementById('parent')
 
 //console.log(parent.parentElement);
 console.log(parent.firstElementChild);
 console.log(parent.hasChildNodes());
+*/
+
+const list = document.getElementById('list')
+const newElement = document.createElement('li')
+newElement.textContent = "i'm a new element"
+//list.children[0].insertAdjacentElement('beforebegin',newElement)
+//list.children[0].insertAdjacentElement('afterend',newElement)
+//list.insertBefore(newElement, list.children[0])
+
+//list.children[1].insertAdjacentHTML('afterend','<li>Elemento con html</li>')
+//list.children[1].insertAdjacentText('afterend','<li>Elemento con html</li>')
+//list.replaceChild(newElement,list.children[0])
+
+//list.children[0].before(newElement)
+//list.prepend(newElement)
+//list.append(newElement)
+//list.children[0].after(newElement)
+//list.children[1].replaceWith(newElement)
+
+//list.after(list.cloneNode(true))
+//list.remove()
+//list.remove(list.children[1])
