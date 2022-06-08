@@ -98,3 +98,21 @@ newElement.textContent = "i'm a new element"
 //list.after(list.cloneNode(true))
 //list.remove()
 //list.remove(list.children[1])
+
+/*
+console.log()
+console.dir()
+connsole.error()
+console.table()
+*/
+/*
+location.href()
+location.protocol()
+location.host()
+location.pathname()
+location.hash()
+location.reload()
+*/
+/*
+Day = it has a chingon of metods
+*/
