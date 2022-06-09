@@ -116,3 +116,30 @@ location.reload()
 /*
 Day = it has a chingon of metods
 */
+//AJAX
+
+const button = document.getElementById('button')
+
+button.addEventListener('click',() =>{
+	let xhr
+	if (window.XMLHttpRequest) xhr = new XMLHttpRequest()
+	else xhr = new ActiveObject("Microsoft.XMLHttpRequest")
+
+	xhr.open('GET',
+		'archivo o url de la peticion ')
+
+	xhr.addEventListener('load',(data) => {
+		const dataJSON = JSON.parse(data.targe.response)
+
+		const list = document.getElementById('list')
+			for (const userInfor of dataJSON){
+				const listItem = document.createElement('LI')
+				listItem.textContent = `${userInfor.id} - 
+				${userInfor.name}`
+				list.appendChild(listItem)
+			}
+		}
+	})
+
+	xhr.send()
+})

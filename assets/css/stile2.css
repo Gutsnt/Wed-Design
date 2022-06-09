@@ -1,8 +1,15 @@
-.classT{
-	background:  red;
+body{
+	background-color: palegreen;
 }
-.loca{
-	height: 200px;
-	width: 200px;
-	background: green;
+/*
+div .title{
+	background-color: burlywood;
+}
+*/
+
+.title1 + .title-2{
+	background-color: tomato;
+}
+.title1 ~ .text2{
+	background-color: teal;
 }
