@@ -1,15 +1,24 @@
 body{
-	background-color: palegreen;
+	background-color: #333;
 }
 /*
 div .title{
 	background-color: burlywood;
 }
 */
-
+/*
+Enlace no hereda colo
+inherit -forzar la herencia-
+initial -quita la herencia-
+*/
 .title1 + .title-2{
 	background-color: tomato;
 }
 .title1 ~ .text2{
 	background-color: teal;
+}
+
+.title{
+	color: inherit;
+	font-size: 10px;
 }
