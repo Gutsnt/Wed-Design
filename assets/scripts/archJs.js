@@ -117,7 +117,7 @@ location.reload()
 Day = it has a chingon of metods
 */
 //AJAX
-
+/*
 const button = document.getElementById('button')
 
 button.addEventListener('click',() =>{
@@ -143,3 +143,23 @@ button.addEventListener('click',() =>{
 
 	xhr.send()
 })
+*/
+
+JAVAX III
+const form = document.getElementById('form')
+form.addEventListener('submit',(e) =>{
+	e.preventDefault()
+	sendData(form)
+})
+
+const sendData = (data) => {
+	let xhr 
+	if(window.XMLHttpRequest) xhr = new XMLHttpRequest
+	else xhr = new ActiveObject("Microsoft.XMLHttpRequest")
+
+	xhr.open('POST','archivo_php')
+	const formData = new formData(data)
+	xhr.send(formData)
+
+
+}
