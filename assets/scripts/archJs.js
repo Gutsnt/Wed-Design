@@ -213,3 +213,76 @@ getUser(2)
 	.then(console.log)
 	.catch(console.log)
 */
+
+//Fetch I
+/*
+if (window.fetch != undefined) console.log('FETCH OK')
+	else console.log('INTERNET EXPORE')
+
+const button = document.getElementById('button')
+
+button.addEventListener('click',()=>{
+	fetch('Ruta-Peticion')
+	.then(res => res.ok ? Promise.resolve(res) : Promise.reject(res))
+	.then(res => res.json())
+	.then(res => {
+		const list = document.getElementById('list')
+		const fragment = document.createDocumentFragment()
+		for (const userInfo of res){
+			cost listItem = document.createElement('LI')
+			listItem.textContent = `${userInfo.id} - ${userInfo.name}`
+			fragment.appendChild(listItem)
+		}
+	list.appendChild(fragment)	
+	})
+
+})
+*/
+//Fetch II
+/*
+
+	console.log(newPost)
+	console.log(JSON.stringify(newPost))
+
+const button = document.getElementById('button')
+
+button.addEventListener('click',()=>{
+	const newPost ={
+		title: 'A new post',
+		body: 'Lorem ipsum dolor sit amet consectetur adipicing',
+		userId:1
+	}
+
+	fetch('Ruta',{
+		method:'POST',
+		body:JSON.stringift(newPost),
+		headers:{
+			"Content-type": "application/json"
+		}
+	})
+	.then(res => res.json())
+	.then(data => console.log(data))
+}) 
+*/
+
+//Fetch III
+/*
+const buttonImg = document.getElementById('button-img')
+const buttonPdf = document.getElementById('button-pdf')
+
+buttonImg.addEventListener('click',() => { 
+	fetch('images.png')
+	.then(res => res.blob())
+	.then(img => {
+		document.getElementById('img').src = URL.createObjectURL(img)
+	})
+})
+
+buttonPdf.addEventListener('click',() => { 
+	fetch('demo.pdf')
+	.then(res => res.blob())
+	.then(pdf => {
+		document.getElementById('pdf').href = URL.createObjectURL(pdf)
+	})
+})
+*/
