@@ -226,15 +226,7 @@ button.addEventListener('click',()=>{
 	.then(res => res.ok ? Promise.resolve(res) : Promise.reject(res))
 	.then(res => res.json())
 	.then(res => {
-		const list = document.getElementById('list')
-		const fragment = document.createDocumentFragment()
-		for (const userInfo of res){
-			cost listItem = document.createElement('LI')
-			listItem.textContent = `${userInfo.id} - ${userInfo.name}`
-			fragment.appendChild(listItem)
-		}
-	list.appendChild(fragment)	
-	})
+		
 
 })
 */
@@ -302,7 +294,6 @@ const sayHello = async () => {
 }
 
 sayHello().then(res => console.log(res ))
-*/
 
 const users = [{id: 1, name: 'Dorian' },{id: 2, name: 'Laura' },
 				{id: 3, name: 'Carlos' }]
@@ -335,3 +326,31 @@ const getInfo = async (id) => {
 	} 
 }
 getInfo(3).then( res => console.log(res))
+*/
+
+//Axios
+/*
+const button = document.getElementById('button')
+
+button.addEventListener('click', () => {
+	axios({
+		method:'GET'
+		url:'url-aqui'
+	}).then(res => {
+		const list = document.getElementById('list')
+		const fragment = document.createDocumentFragment()
+		for (const userInfo of res.data){
+			cost listItem = document.createElement('LI')
+			listItem.textContent = `${userInfo.id} - ${userInfo.name}`
+			fragment.appendChild(listItem)
+		}
+	list.appendChild(fragment)	
+	}).catch(e => console.log(e))
+})
+*/
+
+const text = document.getElementById('title').textContent
+
+const regEx = /axios/gi
+
+console.log(regEx.test(text))

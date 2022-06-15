@@ -11,9 +11,7 @@ Enlace no hereda colo
 inherit -forzar la herencia-
 initial -quita la herencia-
 */
-#title {
-	color: red;
-}
+
 .title1 + .title-2{
 	background-color: tomato;
 }
