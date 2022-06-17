@@ -1,28 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">  
-  <head>    
-    <meta charset="utf-8">
-    <title>Praticing Js</title>     
-    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/stile2.css">
-  </head>  
-  <body>    
-    <header> 
+<html lang="es">
 
-      <h1 id="title" class="title" >Axios</h1>
-      <h2 class="title-2"> Axios <span>II</span></h2>
-      <button id="button"> Get Data</button>
-      <ul id="list"></ul>
-    </header>    
-    <nav>
-    </nav>
-    <section>                
-    </section>
-    <aside>
-    </aside>
-    <footer>
-    </footer>
-  </body>  
-  <script src="Link-de-axios" ></script>
-  <script src="./assets/scripts/archJs.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms I</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/stile2.css">
+  </head>
+
+  <body>
+    <h1 id="title">Forms I</h1>
+    <form action="#" method="post" class="form" id="form">
+      <div class="form__field">
+        <label for="name" class="form__label">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form__field">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div id="gender" class="form__field">
+        <label for=" male">Male</label>
+        <input type="radio" name="gender" value="male">
+        <label for="male">Female</label>
+        <input type="radio" name="gender" value="female">
+      </div>
+      <div class="form__field">
+        <label for="terms">I accept the terms and conditions</label>
+        <input type="checkbox" name="terms" id="terms">
+      </div>
+      <button id="submitButton" class="send" disabled>Send</button>
+    </form>
+    <script src="./assets/scripts/archJs.js"></script>
+  </body>
+
 </html>
+
+

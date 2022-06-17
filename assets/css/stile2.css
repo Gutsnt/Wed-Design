@@ -1,28 +1,15 @@
-body{
-	background-color: #C564DB;
-}
-/*
-div .title{
-	background-color: burlywood;
-}
-*/
-/*
-Enlace no hereda colo
-inherit -forzar la herencia-
-initial -quita la herencia-
-*/
-
-.title1 + .title-2{
-	background-color: tomato;
-}
-.title1 ~ .text2{
-	background-color: teal;
+.form {
+    width: 90%;
+    text-align: center;
 }
 
-.title{
-	color: inherit;
-	font-size: px;
+.form__field {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
-.title-2 {
-	color: orange; 
+button{
+	margin-right: 80%
 }
