@@ -355,6 +355,7 @@ const regEx = /axios/gi
 
 console.log(regEx.test(text))
 */
+/*
 const form = document.getElementById('form')
 const button = document.getElementById('submitButton')
 
@@ -399,3 +400,6 @@ const validateForm = () => {
 	if (valid == -1) form.submit()
 	else alert('Form invalid')
 }
+*/
+//#45 al 48 Expresiones Regulares 
+Expresiones
