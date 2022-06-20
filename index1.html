@@ -3,23 +3,23 @@
 
   <head>
     <meta charset="UTF-8" />
-    <title> API Drag & Drop II</title>
+    <title> API File II</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/stile2.css">
   </head>
+  <body>
+     <form class="form" method="post" enctype="multipart/form-data">
+      <div>
+        <input class="hide" type="file" name="file" id="file" multiple />
 
-   <div class="container">
-      <div id="pending-tasks" class="tasks">
-        <h2 class="title">Pending Tasks</h2>
-        <div id="task-1" class="task" draggable="true">Task 1</div>
-        <div id="task-2" class="task" draggable="true">Task 2</div>
-        <div id="task-3" class="task" draggable="true">Task 3</div>
-        <div id="task-4" class="task" draggable="true">Task 4</div>
-        <div id="task-5" class="task" draggable="true">Task 5</div>
-      </div>
-      <div id="finished-tasks" class="tasks">
-        <h2 class="title">Finished Tasks</h2>
-      </div>
-    </div>
+        <div id="drop-zone" class="drop-zone">
+          <i class="fas fa-file-upload"></i>
+          <p class="drop-zone__text">
+            Drop file or click to upload file
+          </p>
+        </div>
+        <input type="submit" id="upload-button" class="form__button" value="Upload">
+    </form>
     <script src="./assets/scripts/archJs.js"></script>
   </body>
 

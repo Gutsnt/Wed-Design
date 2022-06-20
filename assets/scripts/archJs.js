@@ -463,7 +463,7 @@ dropZone.addEventListener('drop',(e) =>{
 	console.log('drop')
 })
 */
-
+/*
 const pendingTasks = document.getElementById('pending-tasks')
 const finishedTasks = document.getElementById('finished-tasks')
 
@@ -484,3 +484,78 @@ finishedTasks.addEventListener('drop', (e) => {
 
 })
 
+*/
+/*
+const fileInput = document.getElementById('file')
+const img = document.getElementById('img')
+const text = document.getElementById('text')
+
+fileInput.addEventListener('change', (e) => { 
+	 const file = e.target.files[0]
+	 const fileReader = new FileReader()
+	 fileReader.readAsText(file)
+	 fileReader.addEventListener('load', (e) =>{
+	 	text.textContent = e.target.result
+	 })
+})
+*/
+/*
+const fileInput = document.getElementById('file')
+const progress = document.getElementById('progress')
+
+
+fileInput.addEventListener('change', (e) => { 
+	 const file = e.target.files[0]
+	 const fileReader = new FileReader()
+	 fileReader.readAsDataURL(file)
+
+	 fileReader.addEventListener('progress', (e) => {
+	 	progress.style.width = Number.parseInt(e.loaded * 100 / e.total) + '%'
+	 })
+
+	 fileReader.addEventListener('loadend', () => {
+	 	progress.style.width = '100%'
+	 })
+})
+
+const root = document.documentElement
+
+fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0]
+    const fileReader = new FileReader()
+    fileReader.readAsDataURL(file)
+
+    fileReader.addEventListener('progress', (e) => {
+        root.style.setProperty('--bar-width', Number.parseInt(e.loaded * 100 / e.total) + '%')
+    })
+
+    fileReader.addEventListener('loadend', () => {
+        root.style.setProperty('--bar-width', '100%')
+    })
+})
+*/
+
+const fileInput = document.getElementById('file')
+const dropZone = document.getElementById('drop-zone')
+
+dropZone.addEventListener('click', () => fileInput.click())
+
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault()
+    dropZone.classList.add('drop-zone--active')
+})
+
+dropZone.addEventListener('dragleave', (e) => {
+    e.preventDefault()
+    dropZone.classList.remove('drop-zone--active')
+})
+
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault()
+    fileInput.files = e.dataTransfer.files
+    // console.log(fileInput.files);
+})
+
+fileInput.addEventListener('change', (e) => {
+    console.log(fileInput.files);
+})
