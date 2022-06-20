@@ -401,5 +401,86 @@ const validateForm = () => {
 	else alert('Form invalid')
 }
 */
-//#45 al 48 Expresiones Regulares 
-Expresiones
+//#44 al 47 Expresiones Regulares 
+//Expresiones
+
+/*
+    API webStorage:
+        Los dos mecanismos en el almacenamiento web son los siguientes:
+            sessionStorage mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).
+            localStorage hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
+        Ambos funcionan con clave:valor y tienen dos métodos fundamentales setItem() para asignar una clave:valor y getItem() que recibe como parámetro la clave de la que quieremos obtener el valor
+*/
+/*
+const form = document.getElementById('form')
+const keys = document.getElementById('keys')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    sessionStorage.setItem(form.key.value, form.value.value)
+
+    keys.innerHTML +=`<option>${form.key.value}</option>`
+
+    form.reset()
+
+ })
+
+keys.addEventListener('change',() =>{
+	document.getElementById('infoValue').textContet = 
+	sessionStorage.getItem(keys[keys.selectedIndex].textContent)
+})
+*/
+/*
+    API drag & drop:
+    Existen dos partes principales en esta API, el objeto a arrastrar y la zona donde vamos a dejarlo
+    Para controlar estas acciones tenemos varios eventos de cada una de las partes
+        Objeto a arrastrar:
+            dragstart: Se dispara al comenzar a arrastrar
+            drag: Se dispara mientras arrastramos
+            dragend: Se dispara cuando soltamos el objeto
+        Zona de destino:
+            dragenter: Se dispara cuando el objeto entra en la zona de destino
+            dragover: Se dispara cuando el objeto se mueve sobre la zona de destino
+            drop: Se dispara cuando soltamos el objeto en la zona de destino
+            dragleave: Se dispara cuando el objeto sale de la zona de destino
+*/
+/*
+const smile = document.getElementById('smile')
+const dropZone = document.getElementById('drop-zone')
+
+smile.addEventListener('dragstart', () => {
+	console.log('start')
+})
+
+dropZone.addEventListener('dragover',(e) =>{
+	e.preventDefault()
+	console.log('a')
+})
+
+dropZone.addEventListener('drop',(e) =>{
+	e.preventDefault()
+	console.log('drop')
+})
+*/
+
+const pendingTasks = document.getElementById('pending-tasks')
+const finishedTasks = document.getElementById('finished-tasks')
+
+pendingTasks.addEventListener('dragstart', (e) => {
+	e.dataTransfer.setData('text/plain',e.target.id)
+})
+pendingTasks.addEventListener('drag',(e) => {
+	e.target.classList.add('active')
+})
+finishedTasks.addEventListener('dragover', (e) =>{
+	e.preventDefault()
+})
+finishedTasks.addEventListener('drop', (e) => {
+	e.preventDefault()
+	const element = document.getElementById(e.dataTransfer.getData('text'))
+	finishedTasks.appendChild(pendingTasks.removeChild(element))
+	element.classList.remove('active')
+
+})
+
