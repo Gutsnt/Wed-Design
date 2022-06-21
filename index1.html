@@ -3,23 +3,21 @@
 
   <head>
     <meta charset="UTF-8" />
-    <title> API File II</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title> IndexedDB </title>
     <link rel="stylesheet" type="text/css" href="./assets/css/stile2.css">
   </head>
   <body>
-     <form class="form" method="post" enctype="multipart/form-data">
-      <div>
-        <input class="hide" type="file" name="file" id="file" multiple />
-
-        <div id="drop-zone" class="drop-zone">
-          <i class="fas fa-file-upload"></i>
-          <p class="drop-zone__text">
-            Drop file or click to upload file
-          </p>
-        </div>
-        <input type="submit" id="upload-button" class="form__button" value="Upload">
+     <form id="form" class="form">
+      <label for="task">Task</label>
+      <input type="text" name="task">
+      <select name="priority">
+        <option value="low">Low</option>
+        <option value="normal">Normal</option>
+        <option value="high">High</option>
+      </select>
+      <button class="button" name="button" data-action="add">Add Task</button>
     </form>
+    <div id="tasks" class="tasks"></div>
     <script src="./assets/scripts/archJs.js"></script>
   </body>
 

@@ -2,43 +2,29 @@ body {
   margin: 0;
   background-color: #2f3238;
   font-family: sans-serif;
-  color: #222;
+  color: #ccc;
   user-select: none;
-}
-
-.drop-zone {
-  width: 80%;
-  margin: 1rem auto;
-  height: 300px;
-  background-color: #838383;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  border: 5px dashed #caced6;
-}
-
-.drop-zone--active {
-  border: 5px solid #caced6;
-  background-color: #414141;
-  color: #caced6;
 }
 
 .form {
   width: 100%;
+  margin-top: 2rem;
   text-align: center;
 }
 
-.form__button {
+.button {
   background: orangered;
   border: none;
   padding: 0.2rem 0.8rem;
   border-radius: 15px;
-  color: #414141;
+  color: #ccc;
   cursor: pointer;
+  margin: 1rem 0;
 }
 
-.hide {
-  display: none;
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
 }
