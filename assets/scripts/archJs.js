@@ -560,7 +560,7 @@ fileInput.addEventListener('change', (e) => {
     console.log(fileInput.files);
 })
 */
-
+/*
  const indexedDB = window.indexedDB
  const form = document.getElementById('form')
  const tasks = document.getElementById('tasks')
@@ -692,3 +692,18 @@ fileInput.addEventListener('change', (e) => {
         }
     })
  }
+ */
+/*
+ 	const video = document.getElementById('video')
+// addEventListener('visibilitychange', (e) => {
+//     if (document.visibilityState === 'visible') {
+//         console.log('PLAY')
+//         video.play()
+//     } else if (document.visibilityState === 'hidden') {
+//         console.log('PAUSE')
+//         video.pause()
+//     }
+// })
+	addEventListener('visibilitychange', () 
+	=> document.visibilityState === 'visible' ? video.play() : video.pause())
+*/
