@@ -829,7 +829,7 @@ const setObserver = () => {
 
 getImages()
 */
-
+/*
 const button = document.getElementById('button')
 
 button.addEventListener('click', () =>{
@@ -848,3 +848,34 @@ const getPosition = (position) => {
 }
 
 const error = (error) => console.log(error)
+*/
+/*
+const title = document.getElementById('title')
+
+const mql = matchMedia('(min-width:400px) and (orientation: landscape)')
+
+const applyMatchMedia = mql => {
+    mql.matches ?
+        //NO HACER ESTO NUNCA
+        document.body.style.backgroundColor = 'red'
+        //ESTO SI
+        // title.classList.add('clase que sea')
+        :
+        //NO HACER ESTO NUNCA
+        document.body.style.backgroundColor = 'royalblue'
+}
+
+addEventListener('resize', () => applyMatchMedia(mql))
+addEventListener('DOMContentLoaded', () => applyMatchMedia(mql))
+*/
+
+const person = {
+	name: 'Dorian',
+	age: 20,
+	email:'person.email'
+}
+
+const {name,age,email} = person 
+
+console.log(name,age,email)
+
