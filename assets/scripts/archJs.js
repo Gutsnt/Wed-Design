@@ -879,3 +879,4 @@ const {name,age,email} = person
 
 console.log(name,age,email)
 
+PRUEBA 
