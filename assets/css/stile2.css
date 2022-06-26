@@ -3,11 +3,13 @@ body {
   }
 
 .block {
- background-color: orange;
+ background-color: purple;
  height: 200px;
  width: 200px;
- margin: 100px 50px 10px 200px;
-
+margin-left: auto;
+margin-right: auto;
+border:5px solid red;
+border-radius: 10px;
  
 }
 
