@@ -868,7 +868,7 @@ const applyMatchMedia = mql => {
 addEventListener('resize', () => applyMatchMedia(mql))
 addEventListener('DOMContentLoaded', () => applyMatchMedia(mql))
 */
-
+/*
 const person = {
 	name: 'Dorian',
 	age: 20,
@@ -878,5 +878,6 @@ const person = {
 const {name,age,email} = person 
 
 console.log(name,age,email)
+*/
 
-PRUEBA 
+console.log(innerWidth);
