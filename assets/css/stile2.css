@@ -1,5 +1,11 @@
 :root {
-	--color-primario: rgb(255,0,0);
+	--primary-color: hsl(214,84%,56%);
+	--text-color: hsl(0,0%,31%);
+	--bg-color: hsl(0,0%,90%);
+	--bg-card-color: hsl(0,0%,98%);
+	--border-radius:.4em;
+	--transition: color 0.1s, background-color 0.2s ease-in-out;
+	--skills-bar-length:0%;
 }
 * {
 	box-sizing: border-box;
